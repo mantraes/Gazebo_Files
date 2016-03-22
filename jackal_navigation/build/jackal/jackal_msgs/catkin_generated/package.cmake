@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jackal_msgs")
+set(jackal_msgs_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(jackal_msgs_DEPRECATED "")
+set(jackal_msgs_VERSION "0.5.1")
+set(jackal_msgs_BUILD_DEPENDS "message_generation" "std_msgs")
+set(jackal_msgs_RUN_DEPENDS "message_runtime" "std_msgs")
+set(jackal_msgs_BUILDTOOL_DEPENDS "catkin")

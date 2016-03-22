@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jackal_control")
+set(jackal_control_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(jackal_control_DEPRECATED "")
+set(jackal_control_VERSION "0.5.1")
+set(jackal_control_BUILD_DEPENDS "roslaunch")
+set(jackal_control_RUN_DEPENDS "controller_manager" "interactive_marker_twist_server" "diff_drive_controller" "joint_state_controller" "joy" "robot_localization" "teleop_twist_joy" "topic_tools")
+set(jackal_control_BUILDTOOL_DEPENDS "catkin")

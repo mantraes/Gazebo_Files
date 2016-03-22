@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "costtest")
+set(costtest_MAINTAINER "ubuntu <ubuntu@todo.todo>")
+set(costtest_DEPRECATED "")
+set(costtest_VERSION "0.0.0")
+set(costtest_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "costmap_2d" "tf")
+set(costtest_RUN_DEPENDS "roscpp" "rospy" "std_msgs" "costmap_2d" "tf")
+set(costtest_BUILDTOOL_DEPENDS "catkin")

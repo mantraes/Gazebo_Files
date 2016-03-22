@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "jackal_description")
+set(jackal_description_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(jackal_description_DEPRECATED "")
+set(jackal_description_VERSION "0.5.1")
+set(jackal_description_BUILD_DEPENDS "roslaunch")
+set(jackal_description_RUN_DEPENDS "robot_state_publisher" "urdf" "xacro" "lms1xx" "pointgrey_camera_description")
+set(jackal_description_BUILDTOOL_DEPENDS "catkin")

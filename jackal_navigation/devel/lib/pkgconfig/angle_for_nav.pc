@@ -1,0 +1,8 @@
+prefix=/home/master/jackal_navigation/devel
+
+Name: angle_for_nav
+Description: Description of angle_for_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/master/jackal_navigation/devel/lib 
+Requires: 
