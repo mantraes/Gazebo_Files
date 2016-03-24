@@ -1,8 +1,0 @@
-prefix=/home/master/jackal_navigation/devel
-
-Name: banana_nav
-Description: Description of banana_nav
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/master/jackal_navigation/devel/lib 
-Requires: 

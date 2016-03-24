@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "jackal_navigation")
-set(jackal_navigation_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
-set(jackal_navigation_DEPRECATED "")
-set(jackal_navigation_VERSION "0.5.1")
-set(jackal_navigation_BUILD_DEPENDS "roslaunch")
-set(jackal_navigation_RUN_DEPENDS "amcl" "gmapping" "map_server" "move_base" "urdf" "xacro")
-set(jackal_navigation_BUILDTOOL_DEPENDS "catkin")

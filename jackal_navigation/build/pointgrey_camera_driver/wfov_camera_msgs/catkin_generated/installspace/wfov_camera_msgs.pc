@@ -1,8 +1,0 @@
-prefix=/home/master/jackal_navigation/install
-
-Name: wfov_camera_msgs
-Description: Description of wfov_camera_msgs
-Version: 0.12.1
-Cflags: -I/home/master/jackal_navigation/install/include
-Libs: -L/home/master/jackal_navigation/install/lib 
-Requires: sensor_msgs message_runtime

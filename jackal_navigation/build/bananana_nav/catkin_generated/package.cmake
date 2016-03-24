@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "bananana_nav")
-set(bananana_nav_MAINTAINER "ubuntu <ubuntu@todo.todo>")
-set(bananana_nav_DEPRECATED "")
-set(bananana_nav_VERSION "0.0.0")
-set(bananana_nav_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "move_base_msgs" "actionlib" "costmap_2d")
-set(bananana_nav_RUN_DEPENDS "roscpp" "rospy" "std_msgs" "move_base_msgs" "actionlib" "costmap_2d")
-set(bananana_nav_BUILDTOOL_DEPENDS "catkin")

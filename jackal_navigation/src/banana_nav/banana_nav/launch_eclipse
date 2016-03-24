@@ -1,5 +1,0 @@
-#!/bin/sh
-
-#Launching ROS sourced instance of Eclpise
-
-bash -i -c "/opt/eclipse/./eclipse"
