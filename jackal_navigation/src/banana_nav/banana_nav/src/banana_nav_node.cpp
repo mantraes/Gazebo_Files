@@ -172,12 +172,12 @@ while(field_length == 0 || field_width == 0){
 
 		ros::spinOnce();//Get new map before next planing decision
 
-		switch(endofRow){//We are either going down a row or going to next row
+		//switch(endofRow){//We are either going down a row or going to next row
 
 		///////////////////////////////////On Row////////////////////////////////////////////////////////////////////
 
 		//Base_link is currently on a row
-		case false:
+		//case false:
 			endofRow = !FindGoal(currentGoal,global_map_updates.data,field_length,field_width,global_map.info.resolution); //obtain goal to send to move_base
 
 			// check that base_link is the right frame
@@ -212,10 +212,10 @@ while(field_length == 0 || field_width == 0){
 			}
 
 			//Get updated costmap before determining if it is an end of a row
-			ros::spinOnce();
+			//ros::spinOnce();
 
 			//Check if we are at an end of a row
-			endofRow = !FindGoal(currentGoal,global_map_updates.data,field_length,field_width,global_map.info.resolution);
+			//endofRow = !FindGoal(currentGoal,global_map_updates.data,field_length,field_width,global_map.info.resolution);
 			/*if(endofRow == true){			
 				ROS_INFO("endofRow = True");
 			}
@@ -223,12 +223,12 @@ while(field_length == 0 || field_width == 0){
 				ROS_INFO("endofRow = False");
 			}
 			*/
-			break;
+			//break;
 
 			//////////////////////////////Find Next Row////////////////////////////////////////////////////////////////////////////////
 
 			//Need to find next row
-		case true:
+		/*case true:
 			//Add error check to FindRow
 			FindRow(currentGoal,global_map_updates.data,field_length,field_width,direction,global_map.info.resolution); //Find goal that lines us up with next row
 
@@ -262,10 +262,10 @@ while(field_length == 0 || field_width == 0){
 				goal.target_pose.pose.orientation.w = tf::createQuaternionFromYaw(0).getW();
 				direction = true;//base link is now facing positive x
 				ROS_INFO("Direction = True");
-			}
+			//}
 
 			//Print current goal to terminal
-			switch(currentGoal.orientation){
+			/*switch(currentGoal.orientation){
 			case true:
 			ROS_INFO("Sending goal x = %f and y = %f and orientation is positive x",currentGoal.x,currentGoal.y);
 			case false:
@@ -305,11 +305,11 @@ while(field_length == 0 || field_width == 0){
 			//Should never get to default case
 			ROS_INFO("ERROR ERROR ERROR in banana_nav_node");
 			break;
-		}
+		}*/
 	}
 
 	///////////////////////////////////Return Home/////////////////////////////////////////////////
-
+/*
 	//Use map frame so you can return to home
 	goal.target_pose.header.frame_id = "map";
 	goal.target_pose.header.stamp = ros::Time::now();
@@ -336,6 +336,7 @@ while(field_length == 0 || field_width == 0){
 		//goal failed -> end node
 		ROS_INFO("The J5 didn't go home. Error...Error...Error");
 	}
+*/
 	return 0;
 }
 

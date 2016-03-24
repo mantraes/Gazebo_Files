@@ -23,7 +23,7 @@ bool FindGoal(Goal &currentGoal,int8 map, int m_x,int m_y,float resolution){
 
 	//Stores the bounds of the map
 	int maxHeight = m_y; int maxWidth = m_x;
-	int bufferHeight = m_y/5;
+	int bufferHeight = m_y/10;
 	//for loop variables
 	int height = 0; int width = 0;
 
@@ -41,8 +41,9 @@ bool FindGoal(Goal &currentGoal,int8 map, int m_x,int m_y,float resolution){
 	float RTLocatedHeight = 0; float RTLocatedWidth = 0;
 
 	//while left tree and right tree have not been found
-  if((LTtrigger == 0)&&(RTtrigger == 0)){	
+ 	
 	for(height = (maxHeight/2)+bufferHeight; height<=maxHeight; height++){
+	 ROS_INFO("Height = %d",height);
 	   if(LTtrigger == false){
 		for(width = halfWidth; width>=0;width--) {//search for the closet tree/obstacle to the left of the base_link
 
@@ -55,6 +56,7 @@ bool FindGoal(Goal &currentGoal,int8 map, int m_x,int m_y,float resolution){
 					LTtrigger = true;
 					LTLocatedHeight = height;
 					LTLocatedWidth = width;
+					ROS_INFO("Left found");
 				}
 
 		}
@@ -71,13 +73,14 @@ bool FindGoal(Goal &currentGoal,int8 map, int m_x,int m_y,float resolution){
 					RTtrigger = true;
 					RTLocatedHeight = height;
 					RTLocatedWidth = width;
+					ROS_INFO("Right Found");
 				}
 			}
 		}
 	}
-  }
+  
 	//Return false if no trees and sets goal to 0,0
-	if(RTtrigger == false || LTtrigger == false){//Check if there are no trees
+	if((RTtrigger == false) || (LTtrigger == false)){//Check if there are no trees
 
 		ROS_INFO("I messed UP");//Displays if we don't see both trees
 		if(LTtrigger)ROS_INFO("LT trigger is true");//Displays if we see tree on left side
@@ -89,7 +92,7 @@ bool FindGoal(Goal &currentGoal,int8 map, int m_x,int m_y,float resolution){
 	}
 
 	//Return true, we have found two trees and have a goal
-	else if((RTtrigger == true && LTtrigger == true)){
+	else if((RTtrigger == true) && (LTtrigger == true)){
 
 		//Location from bot in meters
 		float MRTLocatedWidth = -resolution*(RTLocatedWidth-maxWidth/2);
